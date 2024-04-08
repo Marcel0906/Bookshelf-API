@@ -32,12 +32,13 @@ const Books = () => {
   return (
     <div>
       <h1>Book Shop</h1>
+      <br></br>
       <div
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr 1fr 1fr",
 
-          gap: "10px",
+          gap: "80px",
         }}
       >
         {books.map((book) => (
@@ -85,7 +86,7 @@ const Books = () => {
               <p>Language: {book.language}</p>
               <p>Link: <a href={book.link}>{book.title}</a> </p>
               <p>Year: {book.year}</p>
-              <p> Pages: {book.pages}</p>
+              <p>Pages: {book.pages}</p>
 
               <button
                 style={{
@@ -100,7 +101,7 @@ const Books = () => {
                 }}
                 onClick={() => handleDelete(book._id)}
               >
-                Deleted
+               delete
               </button>
               <button
                 style={{
@@ -114,7 +115,7 @@ const Books = () => {
                   margin: "5px",
                 }}
               >
-                Update
+               update
               </button>
             </div>
           </div>

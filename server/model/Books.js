@@ -11,9 +11,6 @@ const bookSchema = Schema({
   pages: Number,
   title: String,
   year: Number,
-  created_at: Number,
-  updated_at: Number,
- 
 });
 
 const Books = model("Books", bookSchema);

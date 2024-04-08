@@ -72,7 +72,7 @@ const Add = () => {
       />
      <input
         type="text"
-        placeholder=" language"
+        placeholder="language"
         onChange={handleChange}
         name="language"
       /> 
@@ -85,13 +85,13 @@ const Add = () => {
   
       <input
         type="number"
-        placeholder=" year "
+        placeholder="year"
         onChange={handleChange}
         name="year"
       />
       <input
         type="number"
-        placeholder=" pages"
+        placeholder="pages"
         onChange={handleChange}
         name="pages"
       />
