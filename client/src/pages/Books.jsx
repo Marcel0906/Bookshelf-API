@@ -32,8 +32,7 @@ const Books = () => {
 
   return (
     <div>
-      <h1>Book Store</h1>
-      <br></br>
+      <h1>Bookshelf (ancient to modern)</h1>
       <button
         style={{
           border: "none",
@@ -42,10 +41,11 @@ const Books = () => {
           backgroundColor: "#caf5c0b9",
           color: "#000",
           padding: "5px 10px",
+          margin: "15px",
           borderRadius: "5px",
         }}
       >
-        <Link to="/add" style={{ textDecoration: "none", color: "#888" }}>
+        <Link to="/add" style={{ textDecoration: "none", color: "#888"}}>
           Add new Book
         </Link>
       </button>
@@ -101,7 +101,9 @@ const Books = () => {
               <p>Author: {book.author}</p>
               <p>Country: {book.country}</p>
               <p>Language: {book.language}</p>
-              <p>Link: <a href={book.link}>{book.title}</a> </p>
+              <a href={book.link}  target="_blank"
+            rel="noreferrer">{book.title}
+            </a> 
               <p>Year: {book.year}</p>
               <p>Pages: {book.pages}</p>
 
@@ -138,7 +140,7 @@ const Books = () => {
           </div>
         ))}
       </div>
-     
+      <a className="" href="/" style={{ textDecoration: "none", color: "black" }}>Back to top </a>
     </div>
   );
 };

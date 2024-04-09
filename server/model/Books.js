@@ -7,7 +7,6 @@ const bookSchema = Schema({
   country: String,
   imageLink: String,
   language: String,
-  link: String,
   year: Number,
   pages: Number,
 });

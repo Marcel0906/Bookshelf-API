@@ -45,7 +45,7 @@ const Add = () => {
         gap: "10px",
       }}
     >
-      <h1>Add New Book</h1>
+      <h1>Add new Book</h1>
       <input
         type="text"
         placeholder="title"
@@ -76,13 +76,6 @@ const Add = () => {
         onChange={handleChange}
         name="language"
       /> 
-      <input
-        type="text"
-        placeholder="link"
-        onChange={handleChange}
-        name="link"
-      />
-  
       <input
         type="number"
         placeholder="year"
