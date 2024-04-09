@@ -54,7 +54,7 @@ router
 
 router
   .get("/:id", async (req, res) => {
-    // Logik zum Abrufen der Buchdetails
+    // logic for getting a single book
     const booksID = req.params.id;
     try {
       const result = await Books.findById({ _id: booksID });
@@ -63,11 +63,11 @@ router
       res.status(404).send("Doesn't exist");
     }
   })
-  .put("/:id", (req, res) => {
-    // Logik zum Aktualisieren von Buchinformationen
+  .put("/:id", async (req, res) => {
+    // logic for updating a book. Does not work yet
     try {
       const booksID = req.params.id;
-      const result =  Books.findByIdAndUpdate(booksID, {
+      const result = await Books.findByIdAndUpdate(booksID, {
           title: req.body.title, // title is the key in the request body
           author: req.body.author,
           country: req.body.country,
@@ -86,7 +86,7 @@ router
     }
   })
   .delete("/:id", async (req, res) => {
-    // Logik zum Löschen eines Buches
+    // logic for deleting a book
     try {
       const booksID = req.params.id;
       await Books.findByIdAndDelete(booksID);
