@@ -53,7 +53,7 @@ router
   });
 
 router
-  .get("/books/:id", async (req, res) => {
+  .get("/:id", async (req, res) => {
     // Logik zum Abrufen der Buchdetails
     const booksID = req.params.id;
     try {
@@ -63,12 +63,11 @@ router
       res.status(404).send("Doesn't exist");
     }
   })
-  .put("/books/:id", (req, res) => {
+  .put("/:id", (req, res) => {
     // Logik zum Aktualisieren von Buchinformationen
     try {
-      const result = new Books.replaceOne(
-        { _id: req.params.id },
-        {
+      const booksID = req.params.id;
+      const result =  Books.findByIdAndUpdate(booksID, {
           title: req.body.title, // title is the key in the request body
           author: req.body.author,
           country: req.body.country,
@@ -86,13 +85,12 @@ router
       res.send(error);
     }
   })
-  .delete("/books/:id", (req, res) => {
+  .delete("/:id", async (req, res) => {
     // Logik zum Löschen eines Buches
     try {
-      const result = Books.deleteOne({
-        _id: req.params.id, // title is the key in the request body
-      });
-      res.send(result, "Deleted was successfully");
+      const booksID = req.params.id;
+      await Books.findByIdAndDelete(booksID);
+      res.send(`Delete was successfully ${booksID}`);
     } catch (error) {
       res.send(error);
     }

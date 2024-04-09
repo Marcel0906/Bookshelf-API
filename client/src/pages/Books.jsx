@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 
 
+
 const Books = () => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
@@ -31,8 +32,24 @@ const Books = () => {
 
   return (
     <div>
-      <h1>Book Shop</h1>
+      <h1>Book Store</h1>
       <br></br>
+      <button
+        style={{
+          border: "none",
+          textDecoration: "none",
+          textAlign: "center",
+          backgroundColor: "#caf5c0b9",
+          color: "#000",
+          padding: "5px 10px",
+          borderRadius: "5px",
+        }}
+      >
+        <Link to="/add" style={{ textDecoration: "none", color: "#888" }}>
+          Add new Book
+        </Link>
+      </button>
+      
       <div
         style={{
           display: "grid",
@@ -121,20 +138,7 @@ const Books = () => {
           </div>
         ))}
       </div>
-      <button
-        style={{
-          border: "none",
-          textDecoration: "none",
-          backgroundColor: "#caf5c0b9",
-          color: "#000",
-          padding: "5px 10px",
-          borderRadius: "5px",
-        }}
-      >
-        <Link to="/add" style={{ textDecoration: "none", color: "#888" }}>
-          Add new Book
-        </Link>
-      </button>
+     
     </div>
   );
 };
