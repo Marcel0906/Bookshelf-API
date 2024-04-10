@@ -25,20 +25,20 @@ router
       year: req.body.year,
       pages: req.body.pages,
     });
-    const result = books;
+ 
     try {
-      const response = {
-        title: result.title, // title is the key in the request body
-        author: result.author,
-        country: result.country,
-        imageLink: result.imageLink,
-        language: result.language,
-        link: result.link,
-        year: result.year,
-        pages: result.pages,
-      };
-      res.send(response);
-      console.log(response);
+      // const response = {
+      //   title: result.title, // title is the key in the request body
+      //   author: result.author,
+      //   country: result.country,
+      //   imageLink: result.imageLink,
+      //   language: result.language,
+      //   link: result.link,
+      //   year: result.year,
+      //   pages: result.pages,
+      // };
+      res.send(books);
+      console.log(books);
     } catch (error) {
       res.send(error);
     }
