@@ -1,9 +1,6 @@
 import "./App.css";
 import Add from "./pages/Add";
 import Books from "./pages/Books";
-
-// update needed to be added
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
