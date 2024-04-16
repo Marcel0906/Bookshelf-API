@@ -64,7 +64,7 @@ router
     }
   })
   .put("/:id", async (req, res) => {
-    // logic for updating a book. Does not work yet
+    
     try {
       const booksID = req.params.id;
       const result = await Books.findByIdAndUpdate(booksID, {

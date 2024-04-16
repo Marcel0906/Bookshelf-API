@@ -30,8 +30,6 @@ const Books = () => {
     }
   };
 
-  // handleUpdate does not work yet
-
   const handleUpdate = async (id) => {
     try {
       await axios.put(`http://localhost:5003/books/${id}`);

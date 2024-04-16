@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
-const { Schema, model } = mongoose;
+const { model } = mongoose;
 
-const bookSchema = Schema({
+
+const bookSchema = mongoose.Schema({
   title: String,
   author: String,
   country: String,
